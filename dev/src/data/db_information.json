@@ -1,0 +1,7 @@
+[{
+    "connection": "mongodb+srv://db_developer:dev-mongo12@daseudla.ttyxr35.mongodb.net/?retryWrites=true&w=majority&appName=DaseUdla",
+    "user": "db_developer",
+    "password": "dev-mongo12",
+    "db" : "dietApp",
+    "collections": ["recipes", "authors", "ingredients"]
+}]
