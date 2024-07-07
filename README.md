@@ -17,3 +17,5 @@ Se puede acceder mediante el siguiente link
 ```bash
 http://127.0.0.1:8000/docs
 ```
+
+Para crear un contenedo en docker ejecutar el siguiente comando

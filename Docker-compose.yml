@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  api:
+    image: dase123/recipesrepoapi:latest
+    environment:
+      MONGODB_CONNECTION_URL: mongodb+srv://db_developer:dev-mongo12@daseudla.ttyxr35.mongodb.net/?retryWrites=true&w=majority&appName=DaseUdla
+      MONGODB_USER: db_developer
+      MONGODB_PASSWORD: dev-mongo12
+      DB_NAME: dietApp
+      RECIPE_COLLECTION: recipes
+      INGREDIENTS_COLLECTION: ingredients
+    ports:
+      - "80"
+    networks:
+      - backend
