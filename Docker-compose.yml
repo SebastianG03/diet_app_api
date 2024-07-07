@@ -1,5 +1,3 @@
-version: '3.8'
-
 services:
   api:
     image: dase123/recipesrepoapi:latest
@@ -12,5 +10,3 @@ services:
       INGREDIENTS_COLLECTION: ingredients
     ports:
       - "80"
-    networks:
-      - backend
