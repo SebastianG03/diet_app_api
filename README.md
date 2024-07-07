@@ -12,3 +12,8 @@ Para ejecutar el servicio dirigirse en la terminal a la carpeta dev/src y ejecut
 ```bash
 fastapi dev main.py
 ```
+
+Se puede acceder mediante el siguiente link
+```bash
+http://127.0.0.1:8000/docs
+```
