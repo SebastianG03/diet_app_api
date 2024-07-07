@@ -3,8 +3,7 @@ from pydantic import BaseModel
 from dev.src.models.ingredients import IngredientsModel
 from dev.src.models.nutrition_information import NutritionInformation
 
-class RecipeUpdateModel(BaseModel):
-    id: str 
+class RecipeUpdateModel(BaseModel): 
     recipe_name: str = None 
     description: str = None
     nutrition_information: NutritionInformation = None
@@ -13,7 +12,7 @@ class RecipeUpdateModel(BaseModel):
 
 
 class RecipeModel(BaseModel):
-    id: str 
+    id: Optional[str] = None 
     recipe_name: str  
     description: str
     nutrition_information: NutritionInformation

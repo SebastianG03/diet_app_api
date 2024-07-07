@@ -6,7 +6,6 @@ from tenacity import (
     retry, 
     stop_after_attempt
     )
-from models import Customer, CustomerInfo
 from .errors import (
     RepositoryNotConnected,
 )

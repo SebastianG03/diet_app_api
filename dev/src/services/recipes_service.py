@@ -1,4 +1,4 @@
-from fastapi import APIRouter, Body, HTTPException, status
+from fastapi import APIRouter, HTTPException, status
 from fastapi.responses import Response
 from pymongo import ReturnDocument
 

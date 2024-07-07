@@ -6,7 +6,7 @@ class IngredientsUpdateModel(BaseModel):
 
 
 class IngredientsModel(BaseModel):
-    id: str 
+    id: Optional[str] = None 
     name: str 
     
 class IngredientsCollection(BaseModel):
