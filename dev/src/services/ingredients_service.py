@@ -1,29 +1,29 @@
 from fastapi import APIRouter, HTTPException, status
 from fastapi.responses import Response
 from pymongo import ReturnDocument
+from motor.motor_asyncio import AsyncIOMotorCollection
+from data.database_connection import DatabaseConnection
+from models import (IngredientsCollection, IngredientsModel, IngredientsUpdateModel)
 
-from dev.src.data.database_connection import DatabaseConnection
-from ..models import ingredients
-
-ingredients_router = APIRouter()
+ingredients_router = APIRouter(tags=['ingredients'])
 connection = DatabaseConnection()
-ingredients_collection = connection.connect_collection(collection='ingredients')
-root = "/api/ingredients/"
+ingredients_collection: AsyncIOMotorCollection = connection.connect_collection(collection='ingredients')
+root = "/ingredients/"
 
 @ingredients_router.post(
     root,
     response_description="Add a new ingredient",
-    response_model=ingredients.IngredientsModel,
+    response_model=IngredientsModel,
     status_code=status.HTTP_201_CREATED,
     response_model_by_alias=False,
 )
-async def create_ingredient(ingredient: ingredients.IngredientsModel):
+async def create_ingredient(ingredient: IngredientsModel):
     """
     Insert a new ingredient.
     A unique `id` will be created and provided in the response.
     """
     new_ingredient = await ingredients_collection.insert_one(
-        ingredient.model_dump(by_alias=True, exclude=["id"])
+        document=ingredient.model_dump(by_alias=True, exclude=["id"])
     )
     created_ingredient = await ingredients_collection.find_one(
         {"_id": new_ingredient.inserted_id}
@@ -33,20 +33,20 @@ async def create_ingredient(ingredient: ingredients.IngredientsModel):
 @ingredients_router.get(
     root,
     response_description="List all ingredients",
-    response_model=ingredients.IngredientsCollection,
+    response_model=IngredientsCollection,
     response_model_by_alias=False,
 )
 async def list_ingredients():
     """
     List all of the ingredients data in the database.
     """
-    return ingredients.IngredientsCollection(ingredients==await ingredients_collection.find().to_list(100))
+    return IngredientsCollection(ingredients=await ingredients_collection.find().to_list())
 
 
 @ingredients_router.get(
     root + "{id}",
     response_description="Get a single ingredient",
-    response_model=ingredients.IngredientsModel,
+    response_model=IngredientsModel,
     response_model_by_alias=False,
 )
 async def show_ingredient(id: str):
@@ -63,7 +63,7 @@ async def show_ingredient(id: str):
 @ingredients_router.get(
     root + "{name}",
     response_description="Get a single ingredient by name",
-    response_model=ingredients.IngredientsModel,
+    response_model=IngredientsModel,
     response_model_by_alias=False,
 )
 async def show_ingredient_by_name(name: str):
@@ -80,10 +80,10 @@ async def show_ingredient_by_name(name: str):
 @ingredients_router.put(
     root + "{id}",
     response_description="Update a ingredient",
-    response_model=ingredients.IngredientsModel,
+    response_model=IngredientsModel,
     response_model_by_alias=False,
 )
-async def update_ingredient(id: str, ingredient: ingredients.IngredientsUpdateModel):
+async def update_ingredient(id: str, ingredient: IngredientsUpdateModel):
     """
     Update individual fields of an existing ingredient record.
     Only the provided fields will be updated.

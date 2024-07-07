@@ -1,23 +1,23 @@
 from fastapi import APIRouter, HTTPException, status
 from fastapi.responses import Response
 from pymongo import ReturnDocument
+from motor.motor_asyncio import AsyncIOMotorCollection
+from data.database_connection import DatabaseConnection
+from models import (RecipeUpdateModel, RecipeCollection, RecipeModel)
 
-from dev.src.data.database_connection import DatabaseConnection
-from ..models import recipes
-
-recipes_router = APIRouter()
+recipes_router = APIRouter(tags=['recipes'])
 connection = DatabaseConnection()
-recipes_collection = connection.connect_collection(collection='recipes') 
-root = "/api/recipes/"
+recipes_collection: AsyncIOMotorCollection = connection.connect_collection(collection='recipes') 
+root = "/recipes/"
 
 @recipes_router.post(
     root,
     response_description="Add a new recipe",
-    response_model=recipes.RecipeModel,
+    response_model=RecipeModel,
     status_code=status.HTTP_201_CREATED,
     response_model_by_alias=False,
 )
-async def create_recipe(recipe: recipes.RecipeModel):
+async def create_recipe(recipe: RecipeModel):
     """
     Insert a new recipe.
     A unique `id` will be created and provided in the response.
@@ -33,20 +33,20 @@ async def create_recipe(recipe: recipes.RecipeModel):
 @recipes_router.get(
     root,
     response_description="List all recipes",
-    response_model=recipes.RecipeCollection,
+    response_model=RecipeCollection,
     response_model_by_alias=False,
 )
 async def list_recipes():
     """
     List all of the recipes data in the database.
     """
-    return recipes.RecipeCollection(recipes==await recipes_collection.find().to_list(100))
+    return RecipeCollection(recipes=await recipes_collection.find().to_list(100))
 
 
 @recipes_router.get(
     root + "{id}",
     response_description="Get a single recipe",
-    response_model=recipes.RecipeModel,
+    response_model=RecipeModel,
     response_model_by_alias=False,
 )
 async def show_recipe(id: str):
@@ -64,10 +64,10 @@ async def show_recipe(id: str):
 @recipes_router.put(
     root + "{id}",
     response_description="Update a ingredient",
-    response_model=recipes.RecipeModel,
+    response_model=RecipeModel,
     response_model_by_alias=False,
 )
-async def update_ingredient(id: str, recipe: recipes.RecipeUpdateModel):
+async def update_ingredient(id: str, recipe: RecipeUpdateModel):
     """
     Update individual fields of an existing recipe record.
     Only the provided fields will be updated.

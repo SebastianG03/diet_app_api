@@ -1,7 +1,7 @@
 from typing import List, Optional
 from pydantic import BaseModel
-from dev.src.models.ingredients import IngredientsModel
-from dev.src.models.nutrition_information import NutritionInformation
+from models.ingredients import IngredientsModel
+from models.nutrition_information import NutritionInformation
 
 class RecipeUpdateModel(BaseModel): 
     recipe_name: str = None 
