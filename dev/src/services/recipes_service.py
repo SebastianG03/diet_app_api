@@ -2,12 +2,18 @@ from fastapi import APIRouter, HTTPException, status
 from fastapi.responses import Response
 from pymongo import ReturnDocument
 from motor.motor_asyncio import AsyncIOMotorCollection
+import motor.motor_asyncio
 from data.database_connection import DatabaseConnection
 from models import (RecipeUpdateModel, RecipeCollection, RecipeModel)
 
 recipes_router = APIRouter(tags=['recipes'])
-connection = DatabaseConnection()
-recipes_collection: AsyncIOMotorCollection = connection.connect_collection(collection='recipes') 
+#connection = DatabaseConnection()
+##connection.__init__()
+#recipes_collection: AsyncIOMotorCollection = connection.connect_collection(collection='recipes') 
+client =motor.motor_asyncio.AsyncIOMotorClient("mongodb+srv://db_developer:dev-mongo12@daseudla.ttyxr35.mongodb.net/?retryWrites=true&w=majority&appName=DaseUdla")
+db = client.get_database("dietApp")
+recipes_collection = db.get_collection("recipes")
+
 root = "/recipes/"
 
 @recipes_router.post(
@@ -23,7 +29,7 @@ async def create_recipe(recipe: RecipeModel):
     A unique `id` will be created and provided in the response.
     """
     new_recipe = await recipes_collection.insert_one(
-        recipe.model_dump(by_alias=True, exclude=["id"])
+        recipe.model_dump(by_alias=True)
     )
     created_recipe = await recipes_collection.find_one(
         {"_id": new_recipe.inserted_id}

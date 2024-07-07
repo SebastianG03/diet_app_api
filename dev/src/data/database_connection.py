@@ -14,7 +14,7 @@ from data.errors import (
 class DatabaseConnection:
      
     
-    def __init__(self):
+    def initialize(self, collection: str):
         self.connection_url = "mongodb+srv://db_developer:dev-mongo12@daseudla.ttyxr35.mongodb.net/?retryWrites=true&w=majority&appName=DaseUdla"
         self.db_name = "dietApp"
         self.collections = ["recipes", "ingredients"]

@@ -1,13 +1,18 @@
 from fastapi import APIRouter, HTTPException, status
 from fastapi.responses import Response
 from pymongo import ReturnDocument
-from motor.motor_asyncio import AsyncIOMotorCollection
+import motor.motor_asyncio
 from data.database_connection import DatabaseConnection
 from models import (IngredientsCollection, IngredientsModel, IngredientsUpdateModel)
 
 ingredients_router = APIRouter(tags=['ingredients'])
-connection = DatabaseConnection()
-ingredients_collection: AsyncIOMotorCollection = connection.connect_collection(collection='ingredients')
+#connection = DatabaseConnection()
+#connection.__init__()
+#ingredients_collection: AsyncIOMotorCollection = connection.connect_collection(collection='ingredients')
+client =motor.motor_asyncio.AsyncIOMotorClient("mongodb+srv://db_developer:dev-mongo12@daseudla.ttyxr35.mongodb.net/?retryWrites=true&w=majority&appName=DaseUdla")
+db = client.get_database("dietApp")
+ingredients_collection = db.get_collection("ingredients")
+
 root = "/ingredients/"
 
 @ingredients_router.post(
@@ -23,7 +28,7 @@ async def create_ingredient(ingredient: IngredientsModel):
     A unique `id` will be created and provided in the response.
     """
     new_ingredient = await ingredients_collection.insert_one(
-        document=ingredient.model_dump(by_alias=True, exclude=["id"])
+        document=ingredient.model_dump(by_alias=True)
     )
     created_ingredient = await ingredients_collection.find_one(
         {"_id": new_ingredient.inserted_id}
@@ -40,8 +45,8 @@ async def list_ingredients():
     """
     List all of the ingredients data in the database.
     """
-    return IngredientsCollection(ingredients=await ingredients_collection.find().to_list())
-
+    ingredients = await ingredients_collection.find().to_list(100)
+    return IngredientsCollection(ingredients=ingredients)
 
 @ingredients_router.get(
     root + "{id}",
@@ -53,15 +58,12 @@ async def show_ingredient(id: str):
     """
     Get the record for a specific ingredient, looked up by `id`.
     """
-    if (
-        ingredient := await ingredients_collection.find_one({"_id": id})
-    ) is not None:
+    if (ingredient := await ingredients_collection.find_one({"_id": id})) is not None:
         return ingredient
     raise HTTPException(status_code=404, detail=f"Ingredient {id} not found")
 
-
 @ingredients_router.get(
-    root + "{name}",
+    root + "name/{name}",
     response_description="Get a single ingredient by name",
     response_model=IngredientsModel,
     response_model_by_alias=False,
@@ -70,12 +72,9 @@ async def show_ingredient_by_name(name: str):
     """
     Get the record for a specific ingredient, looked up by `name`.
     """
-    if (
-        ingredient := await ingredients_collection.find_one({"name": name})
-    ) is not None:
+    if (ingredient := await ingredients_collection.find_one({"name": name})) is not None:
         return ingredient
-    raise HTTPException(status_code=404, detail=f"Ingredient {id} not found")
-
+    raise HTTPException(status_code=404, detail=f"Ingredient {name} not found")
 
 @ingredients_router.put(
     root + "{id}",
@@ -90,7 +89,7 @@ async def update_ingredient(id: str, ingredient: IngredientsUpdateModel):
     Any missing or `null` fields will be ignored.
     """
     ingredient = {
-        k: v for k, v in ingredient.model_dump(by_alias=True).items() if v is not None
+        k: v for k, v in ingredient.dict(by_alias=True).items() if v is not None
     }
 
     if len(ingredient) >= 1:
@@ -110,7 +109,6 @@ async def update_ingredient(id: str, ingredient: IngredientsUpdateModel):
 
     raise HTTPException(status_code=404, detail=f"Ingredient {id} not found")
 
-
 @ingredients_router.delete(root + "{id}", response_description="Delete a ingredient")
 async def delete_ingredient(id: str):
     """
@@ -122,4 +120,3 @@ async def delete_ingredient(id: str):
         return Response(status_code=status.HTTP_204_NO_CONTENT)
 
     raise HTTPException(status_code=404, detail=f"Ingredient {id} not found")
-
