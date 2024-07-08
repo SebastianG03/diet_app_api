@@ -9,4 +9,4 @@ services:
       RECIPE_COLLECTION: recipes
       INGREDIENTS_COLLECTION: ingredients
     ports:
-      - "80"
+      - "60392:80"
