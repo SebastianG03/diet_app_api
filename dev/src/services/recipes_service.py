@@ -1,8 +1,13 @@
-from fastapi import APIRouter, HTTPException, status
+import datetime
+from bson import ObjectId
+from fastapi import APIRouter, Depends, HTTPException, status
 from fastapi.responses import Response
 from pymongo import ReturnDocument
+from pymongo.errors import PyMongoError
 from motor.motor_asyncio import AsyncIOMotorCollection
 import motor.motor_asyncio
+from prediction.recommendation_system import recomendate_recipes
+from prediction.user_data import UserData, get_user_data
 from data.database_connection import DatabaseConnection
 from models import (RecipeUpdateModel, RecipeCollection, RecipeModel)
 
@@ -15,6 +20,24 @@ db = client.get_database("dietApp")
 recipes_collection = db.get_collection("recipes")
 
 root = "/recipes/"
+
+@recipes_router.get(
+    root + 'recomendations',
+    response_description="""Recomienda recetas en base a la información ingresada del usuario:
+    edad en años, peso en kg, altura en cm, genero, objetivo y la cantidad de ejercicio propuesto""",
+    response_model=RecipeCollection,
+    response_model_by_alias=False,
+    tags=["recommendations"]
+)
+async def list_recipes(user_data: UserData = Depends(get_user_data)):
+    cursor = recipes_collection.find()
+    recipes_list = await cursor.to_list(length=100)
+    recipes = [RecipeModel(**recipe) for recipe in recipes_list]
+
+    recomendated = recomendate_recipes(recipes=recipes, user_data=user_data) 
+    return RecipeCollection(recipes=recomendated)
+
+
 
 @recipes_router.post(
     root,
@@ -35,19 +58,33 @@ async def create_recipe(recipe: RecipeModel):
         {"_id": new_recipe.inserted_id}
     )
     return created_recipe
-
 @recipes_router.get(
     root,
     response_description="List all recipes",
-    response_model=RecipeCollection,
+    response_model=list[RecipeModel],
     response_model_by_alias=False,
 )
 async def list_recipes():
     """
     List all of the recipes data in the database.
     """
-    return RecipeCollection(recipes=await recipes_collection.find().to_list(100))
+    try:
+        cursor = recipes_collection.find()
+        recipes_list = await cursor.to_list(length=100)
+        list_recipes = []
 
+        for recipe in recipes_list:
+            list_recipes.append(recipe)
+
+        return list_recipes
+    except PyMongoError as e:
+        # Manejo de errores específicos de PyMongo
+        print(f"Error al acceder a la base de datos: {e}")
+        raise HTTPException(status_code=500, detail="Error interno del servidor")
+
+    except Exception as e:
+        print(f"Error inesperado: {e}")
+        raise HTTPException(status_code=422, detail="Entidad no procesable")
 
 @recipes_router.get(
     root + "{id}",

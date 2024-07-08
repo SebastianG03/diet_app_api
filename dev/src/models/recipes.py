@@ -1,23 +1,22 @@
-from typing import List, Optional
-from pydantic import BaseModel
-from models.ingredients import IngredientsModel
+from typing import Dict, List, Optional
+from pydantic import BaseModel, Field
 from models.nutrition_information import NutritionInformation
 
 class RecipeUpdateModel(BaseModel): 
     recipe_name: str = None 
     description: str = None
     nutrition_information: NutritionInformation = None
-    ingredients: IngredientsModel = None
-    steps: list = None
+    ingredients: List[str] = None
+    steps: List[str] = None
 
 
 class RecipeModel(BaseModel):
-    id: Optional[str] = None 
-    recipe_name: str  
+    id: str = Field(alias='_id') 
+    recipe_name: str = Field()
     description: str
     nutrition_information: NutritionInformation
-    ingredients_ids: List[str]
-    steps: list 
+    ingredients: List[str]
+    steps: List[str]
 
 class RecipeCollection(BaseModel):
     recipes: List[RecipeModel]

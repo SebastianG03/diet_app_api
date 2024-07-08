@@ -1,0 +1,845 @@
+[
+    {
+      "_id": "1",
+      "recipe_name": "Ensalada de Quinoa y Vegetales Asados",
+      "description": "Una ensalada nutritiva y colorida con quinoa y vegetales asados al horno.",
+      "nutrition_information": {
+        "calories": 280,
+        "total_fats": 12,
+        "cholesterol": 0,
+        "sodium": 150,
+        "total_carbohydrates": 35,
+        "protein": 10,
+        "vitamins_minerals": {
+          "Iron": 0.02,
+          "Magnesium": 0.05,
+          "Fiber": 0.07
+        },
+        "servings_per_persons": 4
+      },
+      "ingredients": [
+        "1 taza de quinoa",
+        "2 tazas de vegetales variados (zanahorias, pimiento, calabacín)",
+        "2 cucharadas de aceite de oliva",
+        "Sal y pimienta al gusto",
+        "Jugo de 1 limón",
+        "1 cucharada de vinagre balsámico"
+      ],
+      "steps": [
+        "Cocinar la quinoa según las instrucciones del paquete.",
+        "Precalentar el horno a 200°C.",
+        "Cortar los vegetales en trozos y mezclarlos con 1 cucharada de aceite de oliva, sal y pimienta.",
+        "Asar los vegetales en el horno durante 20-25 minutos.",
+        "Mezclar la quinoa cocida con los vegetales asados.",
+        "Aliñar con el jugo de limón, vinagre balsámico y el aceite de oliva restante."
+      ]
+    },
+    {
+      "_id": "2",
+      "recipe_name": "Salmón al Horno con Espárragos",
+      "description": "Un plato saludable de salmón al horno acompañado de espárragos frescos.",
+      "nutrition_information": {
+        "calories": 320,
+        "total_fats": 18,
+        "cholesterol": 70,
+        "sodium": 180,
+        "total_carbohydrates": 5,
+        "protein": 35,
+        "vitamins_minerals": {
+          "Omega-3": 0.03,
+          "Vitamin D": 0.015,
+          "Potassium": 0.06
+        },
+        "servings_per_persons": 2
+      },
+      "ingredients": [
+        "2 filetes de salmón",
+        "1 manojo de espárragos",
+        "2 cucharadas de aceite de oliva",
+        "1 limón",
+        "Sal y pimienta al gusto",
+        "1 diente de ajo picado"
+      ],
+      "steps": [
+        "Precalentar el horno a 180°C.",
+        "Colocar los filetes de salmón en una bandeja para hornear.",
+        "Mezclar el aceite de oliva, jugo de limón y ajo picado.",
+        "Verter la mezcla sobre el salmón y los espárragos.",
+        "Sazonar con sal y pimienta.",
+        "Hornear durante 15-20 minutos hasta que el salmón esté cocido."
+      ]
+    },
+    {
+      "_id": "3",
+      "recipe_name": "Bowl de Batata y Garbanzos",
+      "description": "Un bowl vegetariano lleno de nutrientes con batata asada y garbanzos especiados.",
+      "nutrition_information": {
+        "calories": 350,
+        "total_fats": 10,
+        "cholesterol": 0,
+        "sodium": 200,
+        "total_carbohydrates": 55,
+        "protein": 12,
+        "vitamins_minerals": {
+          "Vitamin A": 0.08,
+          "Fiber": 0.09,
+          "Iron": 0.03
+        },
+        "servings_per_persons": 3
+      },
+      "ingredients": [
+        "2 batatas medianas",
+        "1 lata de garbanzos",
+        "2 cucharadas de aceite de oliva",
+        "1 cucharadita de comino",
+        "1 cucharadita de pimentón",
+        "Sal y pimienta al gusto",
+        "2 tazas de espinacas frescas"
+      ],
+      "steps": [
+        "Precalentar el horno a 200°C.",
+        "Cortar las batatas en cubos y mezclarlas con 1 cucharada de aceite, sal y pimienta.",
+        "Asar las batatas durante 25-30 minutos.",
+        "Mezclar los garbanzos con el aceite restante, comino y pimentón.",
+        "Agregar los garbanzos a la bandeja de las batatas y asar 10 minutos más.",
+        "Servir sobre una cama de espinacas frescas."
+      ]
+    },
+    {
+      "_id": "4",
+      "recipe_name": "Smoothie Verde Energético",
+      "description": "Un smoothie nutritivo y refrescante lleno de vegetales de hoja verde y frutas.",
+      "nutrition_information": {
+        "calories": 180,
+        "total_fats": 3,
+        "cholesterol": 0,
+        "sodium": 50,
+        "total_carbohydrates": 35,
+        "protein": 5,
+        "vitamins_minerals": {
+          "Vitamin C": 0.06,
+          "Vitamin K": 0.07,
+          "Potassium": 0.05
+        },
+        "servings_per_persons": 2
+      },
+      "ingredients": [
+        "2 tazas de espinacas",
+        "1 plátano maduro",
+        "1 manzana verde",
+        "1 taza de leche de almendras",
+        "1 cucharada de semillas de chía",
+        "1/2 taza de hielo"
+      ],
+      "steps": [
+        "Lavar las espinacas y la manzana.",
+        "Pelar y cortar el plátano y la manzana.",
+        "Añadir todos los ingredientes en una licuadora.",
+        "Licuar hasta obtener una mezcla suave.",
+        "Servir inmediatamente y disfrutar."
+      ]
+    },
+    {
+      "_id": "5",
+      "recipe_name": "Wrap de Pavo y Aguacate",
+      "description": "Un wrap ligero y nutritivo con pavo magro, aguacate y vegetales frescos.",
+      "nutrition_information": {
+        "calories": 300,
+        "total_fats": 15,
+        "cholesterol": 30,
+        "sodium": 400,
+        "total_carbohydrates": 25,
+        "protein": 20,
+        "vitamins_minerals": {
+          "Vitamin E": 0.02,
+          "Folate": 0.03,
+          "Vitamin B6": 0.01
+        },
+        "servings_per_persons": 1
+      },
+      "ingredients": [
+        "1 tortilla integral grande",
+        "100g de pavo en lonchas",
+        "1/2 aguacate",
+        "1 tomate",
+        "Hojas de lechuga",
+        "1 cucharada de mostaza Dijon",
+        "Pimienta negra al gusto"
+      ],
+      "steps": [
+        "Calentar ligeramente la tortilla en una sartén.",
+        "Untar la mostaza sobre la tortilla.",
+        "Colocar las lonchas de pavo sobre la tortilla.",
+        "Cortar el aguacate y el tomate en rodajas y añadirlos.",
+        "Agregar las hojas de lechuga y espolvorear con pimienta.",
+        "Enrollar la tortilla firmemente y cortar por la mitad."
+      ]
+    },
+    {
+      "_id": "6",
+      "recipe_name": "Bowl de Açaí",
+      "description": "Un desayuno refrescante y nutritivo con açaí, frutas y granola.",
+      "nutrition_information": {
+        "calories": 320,
+        "total_fats": 14,
+        "cholesterol": 0,
+        "sodium": 20,
+        "total_carbohydrates": 48,
+        "protein": 5,
+        "vitamins_minerals": {
+          "Vitamin C": 0.05,
+          "Iron": 0.02,
+          "Calcium": 0.04
+        },
+        "servings_per_persons": 1
+      },
+      "ingredients": [
+        "100g de pulpa de açaí congelada",
+        "1 plátano",
+        "1/2 taza de fresas",
+        "1/4 taza de granola",
+        "1 cucharada de miel",
+        "1 cucharada de semillas de chía"
+      ],
+      "steps": [
+        "Licuar la pulpa de açaí con medio plátano hasta obtener una consistencia cremosa.",
+        "Verter la mezcla de açaí en un bowl.",
+        "Cortar el resto del plátano y las fresas en rodajas.",
+        "Decorar el bowl con las frutas cortadas, granola y semillas de chía.",
+        "Rociar con miel y servir inmediatamente."
+      ]
+    },
+    {
+      "_id": "7",
+      "recipe_name": "Pechuga de Pollo a la Parrilla con Ensalada de Quinoa",
+      "description": "Pechuga de pollo jugosa acompañada de una ensalada de quinoa con vegetales.",
+      "nutrition_information": {
+        "calories": 380,
+        "total_fats": 12,
+        "cholesterol": 85,
+        "sodium": 300,
+        "total_carbohydrates": 30,
+        "protein": 40,
+        "vitamins_minerals": {
+          "Niacin": 0.08,
+          "Selenium": 0.03,
+          "Phosphorus": 0.06
+        },
+        "servings_per_persons": 2
+      },
+      "ingredients": [
+        "2 pechugas de pollo",
+        "1 taza de quinoa",
+        "2 tazas de caldo de verduras",
+        "1 pimiento rojo",
+        "1 pepino",
+        "2 cucharadas de aceite de oliva",
+        "Jugo de 1 limón",
+        "Sal y pimienta al gusto"
+      ],
+      "steps": [
+        "Sazonar las pechugas de pollo con sal y pimienta.",
+        "Cocinar el pollo en una parrilla o sartén hasta que esté dorado y cocido.",
+        "Cocinar la quinoa en el caldo de verduras según las instrucciones del paquete.",
+        "Cortar el pimiento y el pepino en cubos pequeños.",
+        "Mezclar la quinoa cocida con los vegetales, aceite de oliva y jugo de limón.",
+        "Servir el pollo con la ensalada de quinoa."
+      ]
+    },
+    {
+      "_id": "8",
+      "recipe_name": "Tortilla de Espinacas y Champiñones",
+      "description": "Una tortilla saludable y sabrosa llena de espinacas y champiñones.",
+      "nutrition_information": {
+        "calories": 250,
+        "total_fats": 18,
+        "cholesterol": 370,
+        "sodium": 350,
+        "total_carbohydrates": 8,
+        "protein": 18,
+        "vitamins_minerals": {
+          "Vitamin A": 0.07,
+          "Vitamin K": 0.09,
+          "Folate": 0.05
+        },
+        "servings_per_persons": 2
+      },
+      "ingredients": [
+        "4 huevos",
+        "2 tazas de espinacas frescas",
+        "1 taza de champiñones en rodajas",
+        "1 diente de ajo picado",
+        "2 cucharadas de aceite de oliva",
+        "Sal y pimienta al gusto",
+        "30g de queso feta (opcional)"
+      ],
+      "steps": [
+        "Batir los huevos en un bowl y sazonar con sal y pimienta.",
+        "Calentar 1 cucharada de aceite en una sartén y saltear el ajo y los champiñones.",
+        "Agregar las espinacas y cocinar hasta que se marchiten.",
+        "Retirar los vegetales y limpiar la sartén.",
+        "Calentar el aceite restante y verter los huevos batidos.",
+        "Agregar los vegetales salteados y el queso feta desmoronado si se usa.",
+        "Cocinar a fuego medio-bajo hasta que esté cuajada y dorada por abajo.",
+        "Doblar la tortilla por la mitad y servir."
+      ]
+    },
+    {
+      "_id": "9",
+      "recipe_name": "Ensalada de Lentejas y Remolacha",
+      "description": "Una ensalada nutritiva y colorida con lentejas, remolacha y queso de cabra.",
+      "nutrition_information": {
+        "calories": 300,
+        "total_fats": 12,
+        "cholesterol": 10,
+        "sodium": 280,
+        "total_carbohydrates": 35,
+        "protein": 15,
+        "vitamins_minerals": {
+          "Iron": 0.04,
+          "Folate": 0.07,
+          "Manganese": 0.05
+        },
+        "servings_per_persons": 3
+      },
+      "ingredients": [
+        "1 taza de lentejas verdes",
+        "2 remolachas medianas cocidas",
+        "2 tazas de espinacas baby",
+        "50g de queso de cabra",
+        "1/4 taza de nueces picadas",
+        "2 cucharadas de vinagre balsámico",
+        "2 cucharadas de aceite de oliva",
+        "Sal y pimienta al gusto"
+      ],
+      "steps": [
+        "Cocinar las lentejas según las instrucciones del paquete y dejar enfriar.",
+        "Cortar las remolachas en cubos.",
+        "En un bowl grande, mezclar las lentejas, remolachas y espinacas.",
+        "Preparar el aderezo mezclando el vinagre balsámico, aceite de oliva, sal y pimienta.",
+        "Verter el aderezo sobre la ensalada y mezclar bien.",
+        "Desmoronar el queso de cabra por encima y espolvorear con las nueces picadas."
+      ]
+    },
+    {
+      "_id": "10",
+      "recipe_name": "Rollitos de Primavera de Tofu",
+      "description": "Rollitos frescos y ligeros rellenos de tofu y vegetales crujientes.",
+      "nutrition_information": {
+        "calories": 220,
+        "total_fats": 8,
+        "cholesterol": 0,
+        "sodium": 250,
+        "total_carbohydrates": 28,
+        "protein": 12,
+        "vitamins_minerals": {
+          "Vitamin C": 0.06,
+          "Calcium": 0.08,
+          "Iron": 0.03
+        },
+        "servings_per_persons": 4
+      },
+      "ingredients": [
+        "8 hojas de papel de arroz",
+        "200g de tofu firme",
+        "1 zanahoria",
+        "1 pepino",
+        "1 taza de col morada rallada",
+        "1/2 taza de hierbabuena fresca",
+        "2 cucharadas de salsa de soja",
+        "1 cucharada de miel",
+        "Jugo de 1 lima"
+      ],
+      "steps": [
+        "Cortar el tofu, la zanahoria y el pepino en tiras finas.",
+        "Mezclar la salsa de soja, miel y jugo de lima para hacer el aderezo.",
+        "Remojar cada hoja de papel de arroz en agua tibia hasta que esté flexible.",
+        "Colocar los vegetales, tofu y hierbabuena en el centro de cada hoja.",
+        "Doblar los lados y enrollar firmemente.",
+        "Servir los rollitos con el aderezo para mojar."
+      ]
+    },
+    {
+      "_id": "11",
+      "recipe_name": "Sopa de Calabaza y Jengibre",
+      "description": "Una sopa cremosa y reconfortante de calabaza con un toque de jengibre.",
+      "nutrition_information": {
+        "calories": 180,
+        "total_fats": 7,
+        "cholesterol": 0,
+        "sodium": 300,
+        "total_carbohydrates": 28,
+        "protein": 4,
+        "vitamins_minerals": {
+          "Vitamin A": 0.12,
+          "Vitamin C": 0.04,
+          "Potassium": 0.07
+        },
+        "servings_per_persons": 4
+      },
+      "ingredients": [
+        "1 kg de calabaza pelada y cortada en cubos",
+        "1 cebolla picada",
+        "2 dientes de ajo picados",
+        "1 cucharada de jengibre fresco rallado",
+        "4 tazas de caldo de verduras",
+        "1/2 taza de leche de coco",
+        "2 cucharadas de aceite de oliva",
+        "Sal y pimienta al gusto",
+        "Semillas de calabaza tostadas para decorar"
+      ],
+      "steps": [
+        "Calentar el aceite en una olla grande y saltear la cebolla, ajo y jengibre.",
+        "Agregar la calabaza y el caldo de verduras.",
+        "Llevar a ebullición y luego reducir el fuego. Cocinar por 20 minutos.",
+        "Licuar la sopa hasta que esté suave.",
+        "Regresar a la olla y agregar la leche de coco.",
+        "Calentar a fuego lento y sazonar con sal y pimienta.",
+        "Servir caliente con semillas de calabaza tostadas por encima."
+      ]
+    },
+    {
+      "_id": "12",
+      "recipe_name": "Tacos de Pescado al Horno",
+      "description": "Tacos saludables con pescado al horno y una salsa de aguacate fresca.",
+      "nutrition_information": {
+        "calories": 350,
+        "total_fats": 15,
+        "cholesterol": 50,
+        "sodium": 400,
+        "total_carbohydrates": 30,
+        "protein": 25,
+        "vitamins_minerals": {
+          "Vitamin D": 0.03,
+          "Omega-3": 0.02,
+          "Vitamin B12": 0.04
+        },
+        "servings_per_persons": 3
+      },
+      "ingredients": [
+        "500g de filete de pescado blanco",
+        "6 tortillas de maíz pequeñas",
+        "1 aguacate",
+        "1 tomate",
+        "1/4 de cebolla roja",
+        "Cilantro fresco",
+        "Jugo de 2 limas",
+        "1 cucharadita de comino",
+        "1 cucharadita de pimentón",
+        "Sal y pimienta al gusto"
+      ],
+      "steps": [
+        "Precalentar el horno a 200°C.",
+        "Sazonar el pescado con comino, pimentón, sal y pimienta.",
+        "Hornear el pescado por 12-15 minutos hasta que esté cocido.",
+        "Mientras tanto, hacer un guacamole mezclando el aguacate machacado, tomate picado, cebolla, cilantro y jugo de lima.",
+        "Calentar las tortillas.",
+        "Desmenuzar el pescado y servir en las tortillas con el guacamole por encima."
+      ]
+    },
+    {
+      "_id": "13",
+      "recipe_name": "Ensalada de Brócoli y Manzana",
+      "description": "Una ensalada crujiente y refrescante con brócoli crudo y manzana.",
+      "nutrition_information": {
+        "calories": 200,
+        "total_fats": 12,
+        "cholesterol": 0,
+        "sodium": 180,
+        "total_carbohydrates": 22,
+        "protein": 6,
+        "vitamins_minerals": {
+          "Vitamin C": 0.09,
+          "Vitamin K": 0.08,
+          "Fiber": 0.06
+        },
+        "servings_per_persons": 4
+      },
+      "ingredients": [
+        "1 cabeza de brócoli",
+        "1 manzana roja",
+        "1/4 taza de almendras laminadas",
+        "1/4 taza de arándanos secos",
+        "2 cucharadas de aceite de oliva",
+        "1 cucharada de vinagre de manzana",
+        "1 cucharadita de miel",
+        "Sal y pimienta al gusto"
+      ],
+      "steps": [
+        "Cortar el brócoli en floretes pequeños.",
+        "Cortar la manzana en cubos pequeños.",
+        "Tostar las almendras laminadas en una sartén seca.",
+        "En un bowl grande, mezclar el brócoli, manzana, almendras y arándanos.",
+        "Preparar el aderezo mezclando aceite de oliva, vinagre de manzana, miel, sal y pimienta.",
+        "Verter el aderezo sobre la ensalada y mezclar bien.",
+        "Dejar reposar por 10 minutos antes de servir para que los sabores se mezclen."
+      ]
+    },
+    {
+      "_id": "14",
+      "recipe_name": "Hamburguesa de Portobello",
+      "description": "Una alternativa vegetariana saludable a la hamburguesa tradicional.",
+      "nutrition_information": {
+        "calories": 280,
+        "total_fats": 14,
+        "cholesterol": 5,
+        "sodium": 350,
+        "total_carbohydrates": 30,
+        "protein": 10,
+        "vitamins_minerals": {
+          "Vitamin D": 0.02,
+          "Selenium": 0.03,
+          "Potassium": 0.05
+        },
+        "servings_per_persons": 2
+      },
+      "ingredients": [
+        "2 hongos portobello grandes",
+        "2 panes integrales para hamburguesa",
+        "1 tomate en rodajas",
+        "Hojas de lechuga",
+        "1 cucharada de aceite de oliva",
+        "1 cucharada de salsa de soja",
+        "1 diente de ajo picado",
+        "1 cucharadita de tomillo seco",
+        "30g de queso de cabra (opcional)"
+      ]
+    },
+    {
+      "_id": "15",
+      "recipe_name": "Pollo Tikka Masala con Arroz Integral",
+      "description": "Plato indio rico en proteínas ideal para aumentar músculo.",
+      "category": "Aumento de músculo",
+      "nutrition_information": {
+        "calories": 550,
+        "total_fats": 20,
+        "cholesterol": 85,
+        "sodium": 600,
+        "total_carbohydrates": 50,
+        "protein": 45,
+        "vitamins_minerals": {
+          "Iron": 0.03,
+          "Vitamin B6": 0.02,
+          "Zinc": 0.015
+        },
+        "servings_per_persons": 2
+      },
+      "ingredients": [
+        "400g de pechuga de pollo",
+        "1 taza de yogur griego",
+        "2 cucharadas de pasta de tomate",
+        "1 cebolla picada",
+        "2 dientes de ajo",
+        "1 cucharada de garam masala",
+        "1 cucharadita de cúrcuma",
+        "1 taza de arroz integral",
+        "200ml de leche de coco",
+        "Aceite de oliva",
+        "Sal y pimienta al gusto"
+      ],
+      "steps": [
+        "Marinar el pollo en yogur, garam masala y cúrcuma por 2 horas.",
+        "Cocinar el arroz integral según las instrucciones del paquete.",
+        "En una sartén grande, saltear la cebolla y el ajo en aceite.",
+        "Agregar el pollo marinado y cocinar hasta que esté dorado.",
+        "Añadir la pasta de tomate y la leche de coco. Cocinar a fuego lento por 15 minutos.",
+        "Servir el pollo sobre el arroz integral."
+      ]
+    },
+    {
+      "_id": "16",
+      "recipe_name": "Burrito Bowl de Carne y Frijoles Negros",
+      "description": "Un plato alto en proteínas y carbohidratos complejos para ganar masa muscular.",
+      "category": "Aumento de músculo",
+      "nutrition_information": {
+        "calories": 650,
+        "total_fats": 25,
+        "cholesterol": 70,
+        "sodium": 550,
+        "total_carbohydrates": 65,
+        "protein": 40,
+        "vitamins_minerals": {
+          "Iron": 0.04,
+          "Magnesium": 0.03,
+          "Vitamin B12": 0.02
+        },
+        "servings_per_persons": 2
+      },
+      "ingredients": [
+        "300g de carne molida magra",
+        "1 taza de arroz integral",
+        "1 lata de frijoles negros",
+        "1 pimiento rojo",
+        "1 cebolla",
+        "1 aguacate",
+        "1 cucharada de aceite de oliva",
+        "2 cucharaditas de comino",
+        "1 cucharadita de chile en polvo",
+        "Cilantro fresco",
+        "Sal y pimienta al gusto"
+      ],
+      "steps": [
+        "Cocinar el arroz integral según las instrucciones del paquete.",
+        "En una sartén, cocinar la carne molida con comino y chile en polvo.",
+        "En otra sartén, saltear la cebolla y el pimiento en aceite de oliva.",
+        "Calentar los frijoles negros.",
+        "Armar los bowls con una base de arroz, luego carne, frijoles y vegetales salteados.",
+        "Decorar con aguacate en rodajas y cilantro picado."
+      ]
+    },
+    {
+      "_id": "17",
+      "recipe_name": "Salmón al Horno con Batata y Brócoli",
+      "description": "Plato rico en proteínas y grasas saludables para el desarrollo muscular.",
+      "category": "Aumento de músculo",
+      "nutrition_information": {
+        "calories": 520,
+        "total_fats": 28,
+        "cholesterol": 90,
+        "sodium": 380,
+        "total_carbohydrates": 35,
+        "protein": 38,
+        "vitamins_minerals": {
+          "Omega-3": 0.05,
+          "Vitamin D": 0.02,
+          "Vitamin A": 0.08
+        },
+        "servings_per_persons": 2
+      },
+      "ingredients": [
+        "2 filetes de salmón (150g cada uno)",
+        "1 batata grande",
+        "2 tazas de brócoli",
+        "2 cucharadas de aceite de oliva",
+        "1 limón",
+        "2 dientes de ajo",
+        "Romero fresco",
+        "Sal y pimienta al gusto"
+      ],
+      "steps": [
+        "Precalentar el horno a 200°C.",
+        "Cortar la batata en cubos y el brócoli en floretes.",
+        "Colocar la batata en una bandeja para hornear, rociar con aceite y hornear por 15 minutos.",
+        "Agregar el brócoli a la bandeja y hornear por 10 minutos más.",
+        "En otra bandeja, colocar los filetes de salmón con rodajas de limón y romero.",
+        "Hornear el salmón por 12-15 minutos.",
+        "Servir el salmón con la batata y el brócoli."
+      ]
+    },
+    {
+      "_id": "18",
+      "recipe_name": "Pasta de Trigo Integral con Pavo y Espinacas",
+      "description": "Una comida equilibrada rica en carbohidratos y proteínas para el crecimiento muscular.",
+      "category": "Aumento de músculo",
+      "nutrition_information": {
+        "calories": 580,
+        "total_fats": 18,
+        "cholesterol": 65,
+        "sodium": 420,
+        "total_carbohydrates": 70,
+        "protein": 40,
+        "vitamins_minerals": {
+          "Iron": 0.04,
+          "Folate": 0.03,
+          "Vitamin B3": 0.02
+        },
+        "servings_per_persons": 2
+      },
+      "ingredients": [
+        "200g de pasta de trigo integral",
+        "300g de pechuga de pavo picada",
+        "3 tazas de espinacas frescas",
+        "2 dientes de ajo",
+        "1 cebolla",
+        "2 cucharadas de aceite de oliva",
+        "1/4 taza de queso parmesano rallado",
+        "Sal y pimienta al gusto"
+      ],
+      "steps": [
+        "Cocinar la pasta según las instrucciones del paquete.",
+        "En una sartén grande, saltear el ajo y la cebolla en aceite de oliva.",
+        "Agregar el pavo picado y cocinar hasta que esté dorado.",
+        "Añadir las espinacas y cocinar hasta que se marchiten.",
+        "Mezclar la pasta cocida con el pavo y las espinacas.",
+        "Agregar el queso parmesano y mezclar bien.",
+        "Servir caliente."
+      ]
+    },
+    {
+      "_id": "19",
+      "recipe_name": "Batido de Proteínas con Avena y Plátano",
+      "description": "Un batido nutritivo ideal para después del entrenamiento y ganar masa muscular.",
+      "category": "Aumento de músculo",
+      "nutrition_information": {
+        "calories": 450,
+        "total_fats": 12,
+        "cholesterol": 65,
+        "sodium": 150,
+        "total_carbohydrates": 55,
+        "protein": 35,
+        "vitamins_minerals": {
+          "Potassium": 0.06,
+          "Calcium": 0.04,
+          "Vitamin B6": 0.02
+        },
+        "servings_per_persons": 1
+      },
+      "ingredients": [
+        "1 scoop de proteína en polvo (sabor vainilla)",
+        "1 plátano maduro",
+        "1/3 taza de avena",
+        "1 cucharada de mantequilla de maní",
+        "1 taza de leche",
+        "1/2 taza de yogur griego",
+        "1 cucharada de miel",
+        "Hielo al gusto"
+      ],
+      "steps": [
+        "Añadir todos los ingredientes en una licuadora.",
+        "Licuar hasta obtener una mezcla suave y cremosa.",
+        "Si está demasiado espeso, agregar un poco más de leche.",
+        "Servir inmediatamente."
+      ]
+    },
+    {
+      "_id": "20",
+      "recipe_name": "Ensalada de Quinoa con Pollo y Aguacate",
+      "description": "Una ensalada equilibrada ideal para mantener el peso.",
+      "category": "Mantenimiento de peso",
+      "nutrition_information": {
+        "calories": 420,
+        "total_fats": 22,
+        "cholesterol": 65,
+        "sodium": 300,
+        "total_carbohydrates": 35,
+        "protein": 28,
+        "vitamins_minerals": {
+          "Iron": 0.03,
+          "Vitamin E": 0.02,
+          "Magnesium": 0.04
+        },
+        "servings_per_persons": 2
+      },
+      "ingredients": [
+        "1 taza de quinoa",
+        "200g de pechuga de pollo",
+        "1 aguacate",
+        "1 tomate",
+        "1/4 de cebolla roja",
+        "Jugo de 1 limón",
+        "2 cucharadas de aceite de oliva",
+        "Cilantro fresco",
+        "Sal y pimienta al gusto"
+      ],
+      "steps": [
+        "Cocinar la quinoa según las instrucciones del paquete y dejar enfriar.",
+        "Asar el pollo con sal y pimienta, luego cortarlo en cubos.",
+        "Cortar el aguacate y el tomate en cubos, y picar finamente la cebolla.",
+        "En un bowl grande, mezclar la quinoa, el pollo y los vegetales.",
+        "Preparar el aderezo con aceite de oliva, jugo de limón, sal y pimienta.",
+        "Verter el aderezo sobre la ensalada y mezclar bien.",
+        "Decorar con cilantro picado y servir."
+      ]
+    },
+    {
+      "_id": "21",
+      "recipe_name": "Wrap de Hummus y Vegetales Asados",
+      "description": "Un wrap vegetariano lleno de fibra y proteínas para mantener el peso.",
+      "category": "Mantenimiento de peso",
+      "nutrition_information": {
+        "calories": 380,
+        "total_fats": 18,
+        "cholesterol": 0,
+        "sodium": 450,
+        "total_carbohydrates": 45,
+        "protein": 15,
+        "vitamins_minerals": {
+          "Vitamin C": 0.05,
+          "Folate": 0.03,
+          "Vitamin A": 0.04
+        },
+        "servings_per_persons": 2
+      },
+      "ingredients": [
+        "2 tortillas integrales grandes",
+        "1/2 taza de hummus",
+        "1 pimiento rojo",
+        "1 calabacín",
+        "1 berenjena pequeña",
+        "1 cucharada de aceite de oliva",
+        "1 cucharadita de za'atar",
+        "Hojas de espinaca fresca",
+        "Sal y pimienta al gusto"
+      ],
+      "steps": [
+        "Precalentar el horno a 200°C.",
+        "Cortar el pimiento, calabacín y berenjena en tiras.",
+        "Mezclar los vegetales con aceite de oliva, za'atar, sal y pimienta.",
+        "Asar los vegetales en el horno por 20 minutos.",
+        "Calentar las tortillas ligeramente.",
+        "Untar el hummus sobre las tortillas.",
+        "Colocar los vegetales asados y las espinacas sobre el hummus.",
+        "Enrollar las tortillas y cortar por la mitad."
+      ]
+    },
+    {
+      "_id": "22",
+      "recipe_name": "Bowl de Tofu y Arroz Integral",
+      "description": "Un bowl vegetariano equilibrado para mantener un peso saludable.",
+      "category": "Mantenimiento de peso",
+      "nutrition_information": {
+        "calories": 400,
+        "total_fats": 15,
+        "cholesterol": 0,
+        "sodium": 350,
+        "total_carbohydrates": 50,
+        "protein": 20,
+        "vitamins_minerals": {
+          "Calcium": 0.06,
+          "Iron": 0.04,
+          "Vitamin B1": 0.02
+        },
+        "servings_per_persons": 2
+      },
+      "ingredients": [
+        "200g de tofu firme",
+        "1 taza de arroz integral",
+        "1 taza de brócoli",
+        "1 zanahoria",
+        "1 cucharada de aceite de sésamo",
+        "2 cucharadas de salsa de soja",
+        "1 cucharada de miel",
+        "1 cucharadita de jengibre rallado",
+        "Semillas de sésamo para decorar"
+      ],
+      "steps": [
+        "Cocinar el arroz integral según las instrucciones del paquete.",
+        "Cortar el tofu en cubos y dorarlos en una sartén con un poco de aceite.",
+        "Cortar el brócoli en floretes y la zanahoria en rodajas.",
+        "Saltear los vegetales en la misma sartén que el tofu.",
+        "Preparar la salsa mezclando salsa de soja, miel, aceite de sésamo y jengibre.",
+        "Servir el arroz en bowls, añadir el tofu y los vegetales.",
+        "Rociar con la salsa y decorar con semillas de sésamo."
+      ]
+    },
+    {
+      "_id": "23",
+      "recipe_name": "Sopa de Lentejas y Espinacas",
+      "description": "Una sopa reconfortante y nutritiva para mantener un peso saludable.",
+      "category": "Mantenimiento de peso",
+      "nutrition_information": {
+        "calories": 320,
+        "total_fats": 8,
+        "cholesterol": 0,
+        "sodium": 400,
+        "total_carbohydrates": 45,
+        "protein": 18,
+        "vitamins_minerals": {
+          "Iron": 0.05,
+          "Folate": 0.06,
+          "Vitamin K": 0.07
+        }
+    },
+        "servings_per_persons": 3
+}
+]
